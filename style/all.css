@@ -95,8 +95,10 @@ img {
   height: auto; /***** 避免圖片變形 ******/
 }
 .container {
-  width: 1296px;
+  max-width:1320px;
   margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .row{
 	display: flex;
@@ -169,13 +171,13 @@ img {
 }
 
 .justify-between{
-	justify-content:space-between;
+	justify-content: space-between;
 }
 .justify-center{
 	justify-content: center;
 }
 .justify-end{
-	justify-content:flex-end;
+	justify-content: flex-end;
 }
 
 .align-center{

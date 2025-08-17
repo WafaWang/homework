@@ -68,11 +68,7 @@ table {
 img{
     vertical-align: middle;
 }
-a{
-    color: var(--primary-400);
-    text-underline-offset:4px;
-    display: block;
-}
+
 body{
 	font-family: "Noto Sans TC", sans-serif;
     font-size:16px;
@@ -85,23 +81,29 @@ body{
     width:856px;
     margin:0 auto;
 }
-h1{
+
+.story-a{
+    color: var(--primary-400);
+    text-underline-offset:4px;
+    display: block;
+}
+.h1{
     font-size:40px;
     line-height:1.2;
     font-weight:700;
 }
-h3{
+.h3{
     font-size:28pX;
     line-height:1.2;
     font-weight:700;
 }
 
-h4{
+.h4{
     font-size:24pX;
     line-height:1.2;
     font-weight:700;
 }
-h5{
+.h5{
     font-size:20pX;
     line-height:1.2;
     font-weight:700;
