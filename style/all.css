@@ -48,7 +48,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 :root{
 	--primary-100:#F5FEE7;
 	--primary-200:#E8FEC5;
@@ -67,12 +71,6 @@ table {
 	--neutral-900:#212529;
 	--danger-300:#D74F4F;
 }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 
 body{
 	 font-family: "Noto Sans TC", sans-serif;
@@ -87,6 +85,7 @@ a{
 	text-decoration: none;
 	display: block;
 	font-weight: 500;
+	
 }
 
 img {
@@ -95,11 +94,12 @@ img {
   height: auto; /***** 避免圖片變形 ******/
 }
 .container {
-  max-width:1320px;
-  margin: 0 auto;
-  padding-left: 12px;
-  padding-right: 12px;
-}
+	
+	max-width:1320px;
+	margin: 0 auto;
+	padding-left: 12px;
+	padding-right: 12px;
+	}
 .row{
 	display: flex;
 	flex-wrap: wrap;
@@ -166,8 +166,54 @@ img {
 	padding-right: 12px;
 	width: calc(100%/12*12);
 }
+@media (max-width:767px){
+	.row{
+		margin-right: -6px;
+		margin-left: -6px;
+	}
+	.col-md-1{
+		padding-left: 6px;
+		padding-right: 6px;
+		width: calc(100% / 4)
+	}
+	.col-md-2{
+		padding-left: 6px;
+		padding-right: 6px;
+		width: calc(100% / 4 * 2)
+	}
+	.col-md-3{
+		padding-left: 6px;
+		padding-right: 6px;
+		width: calc(100% / 4 * 3)
+	}
+	.col-md-4{
+		padding-left: 6px;
+		padding-right: 6px;
+		width: 100%;
+	}
+}
+
 .d-flex{
 	display: flex;
+}
+.d-none{
+	display: none;
+}
+@media (max-width:767px){
+	.d-md-block{
+		display: block;
+	}
+	.d-md-none{
+		display: none;
+	}
+}
+@media (max-width:576px){
+	.d-sm-block{
+		display: block;
+	}
+	.d-sm-none{
+		display: none;
+	}
 }
 
 .justify-between{
@@ -188,6 +234,11 @@ img {
 }
 .gap-8{
 	gap: 8px;
+}
+.h1{
+    font-size:40px;
+    line-height:1.2;
+    font-weight:700;
 }
 
 .h2 {
@@ -215,10 +266,41 @@ img {
   line-height: 1.2;
   font-weight: 700;
 }
+@media(max-width:767px){
+    .h3-md{
+        font-size: 28px;
+            }
+    .h4-md{
+        font-size:24px;
+    }
+    .h5-md{
+        font-size: 20px;
+            }
+    .h6-md{
+        font-size:16px;
+    }
+}
+
+@media(max-width:576px){
+    .h3-sm{
+        font-size: 28px;
+    }
+    .h4-sm{
+        font-size:24px;
+    }
+    .h5-sm{
+        font-size:20px;
+    }
+    .h6-sm{
+        font-size:16px;
+    }
+}
+
 .text-sm{
 	font-size: 14px;
-	
+	font-weight:400;	
 }
+
 .text-align{
 	text-align: center;
 }
@@ -228,8 +310,21 @@ img {
 .text-danger{
 	color: var(--danger-300);
 }
+.text-neutral-300{
+    color: var(--neutral-300);
+}
 .text-neutral-600{
 	color: var(--neutral-600);
+}
+.text-neutral-900{
+    color:var(--neutral-900);
+}
+
+.text-white{
+    color:var(--neutral-0);
+}
+.bg-primary-100{
+    background-color: var(--primary-100);
 }
 .bg-primary-200{
 	background-color: var(--primary-200);
@@ -240,6 +335,9 @@ img {
 
 .p-12{
 	padding: 12px;
+}
+.p-32{
+    padding:32px;
 }
 .py-8{
 	padding-top: 8px;
@@ -269,6 +367,67 @@ img {
 	padding-top: 64px;
 	padding-bottom: 64px;
 }
+.px-24{
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.pb-12{
+	padding-bottom: 12px;
+}
+.pb-48{
+    padding-bottom:48px;
+}
+.pe-8{
+    padding-right:8px;
+}
+.pt-64{
+	padding-top: 64px;
+}
+@media (max-width: 767px){
+	.p-md-24{
+		padding: 24px;
+	}
+    .px-md-12{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .py-md-32{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .pb-md-32{
+        
+        padding-bottom: 32px;
+    }
+    
+}
+
+@media (max-width: 576px){
+	.py-sm-8{
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+    .px-sm-12{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .py-sm-12{
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+	.px-sm-16{
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+    .py-sm-32{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+	.pt-sm-32{
+		padding-top: 32px;
+	}
+}
+
 .mb-4{
 	margin-bottom: 4px;
 }
@@ -317,6 +476,38 @@ img {
 .mt-64{
 	margin-top: 64px;
 }
+@media (max-width: 767px){
+	.mb-md-12{
+		margin-bottom: 12px;
+	}
+	.mr-md-16{
+        margin-right: 16px;
+    }
+	.mb-md-16{
+		margin-bottom: 16px;
+	}
+    .mb-md-32{
+        margin-bottom: 32px;
+    }
+	.mt-md-32{
+		margin-top: 32px;
+	}
+}
+
+@media (max-width: 576px){
+    .mr-sm-0 {
+        margin-right: 0;
+    }
+    .mr-sm-16{
+        margin-right: 16px;
+    }
+    .mb-sm-4{
+        margin-bottom: 4px;
+    }
+    .mb-sm-8{
+        margin-bottom: 8px;
+    }
+}
 
 .bi{
 	vertical-align: bottom;
@@ -332,7 +523,7 @@ img {
 	display: flex;
 	font-weight: 500;
 }
-.breabcrumb-link{
+.breadcrumb-link{
 	color: var(--neutral-600);
 }
 .btn{

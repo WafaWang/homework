@@ -1,175 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
-
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height:1;
-}
-ol, ul {
-	list-style:none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-*,
-*::before,*::after {
-  box-sizing: border-box;
-}
-
-:root{
-    --primary-100:#F5FEE7;
-    --primary-400:#57A203;
-    --neutral-0:#FFFFFF;
-    --neutral-900:#212529;
-    --neutral-600 :#6C757D;
-    --neutral-300 :#DEE2E6;
-    --neutral-100:#F8F9FA;
-}
-
-img{
-    vertical-align: middle;
-}
-
-body{
-	font-family: "Noto Sans TC", sans-serif;
-    font-size:16px;
-    line-height:1.5;
-    letter-spacing:0.05em;
-    color: var(--neutral-900)
-    
-}
-.container{
-    width:856px;
-    margin:0 auto;
-}
 
 .story-a{
     color: var(--primary-400);
+    text-decoration: underline;
     text-underline-offset:4px;
     display: block;
-}
-.h1{
-    font-size:40px;
-    line-height:1.2;
-    font-weight:700;
-}
-.h3{
-    font-size:28pX;
-    line-height:1.2;
-    font-weight:700;
-}
-
-.h4{
-    font-size:24pX;
-    line-height:1.2;
-    font-weight:700;
-}
-.h5{
-    font-size:20pX;
-    line-height:1.2;
-    font-weight:700;
-}
-.text-sm{
-    font-size:14px;
-    font-weight:400;
-}
-.text-neutral-300{
-    color: var(--neutral-300);
-}
-
-.bg-primary-100{
-    background-color: var(--primary-100);
-}
-.bg-neutral-100{
-    background-color: var(--neutral-100);
-}
-
-.text-primary-400{
-   color:var(--primary-400);
-}
-.text-white{
-    color:var(--neutral-0);
-}
-.text-neutral-900{
-    color:var(--neutral-900);
-}
-.text-neutral-600{
-    color:var(--neutral-600);
-}
-.p-32{
-    padding:32px;
-}
-.py-8{
-    padding-top:8px;
-    padding-bottom:8px;
-}
-
-.py-64{
-    padding-top:64px;
-    padding-bottom:64px;
-}
-.pb-48{
-    padding-bottom:48px;
-
-}
-
-.pe-8{
-    padding-right:8px;
-
-}
-.mb-48{
-    margin-bottom:48px;
-}
-.mb-4{
-    margin-bottom:4px;
-}
-.mb-12{
-    margin-bottom:12px;
-}
-.mb-16{
-    margin-bottom:16px;
-}
-.mb-24 {
-    margin-bottom:24px;
 }
 
 .header{
@@ -185,10 +19,28 @@ body{
     font-size:28px;
 }
 
+@media(max-width:767px){
+    .header{
+        padding: 87px 0 ;
+        background-image: url(/img/hero-sm.png);
+    }
+    .eng-title{
+    font-size:20px;
+}
+}
+.quote-bnt{
+    border-radius:4px;
+}
 .quote{
     border-radius:12px;
     text-align: center;
 }
+@media(max-width:767px){
+    .quote{
+        text-align: left;
+    }
+}
+
 .intro img{
     width:1076px;
     margin-right:-110px;
@@ -214,7 +66,4 @@ body{
 .bi{
     padding-right: 8px;
     vertical-align: bottom;
-}
-.footer{
-    text-align: center;
 }
