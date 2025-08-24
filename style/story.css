@@ -22,7 +22,7 @@
 @media(max-width:767px){
     .header{
         padding: 87px 0 ;
-        background-image: url(/img/hero-sm.png);
+        background-image: url(./img/hero-sm.png);
     }
     .eng-title{
     font-size:20px;
